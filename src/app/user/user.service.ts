@@ -7,7 +7,7 @@ import {User} from "../interface/user.interface";
   providedIn: 'root'
 })
 export class UserService {
-  private jsonFile = 'assets/user.json'
+  private jsonFile = 'assets/users.json'
 
   constructor(private http: HttpClient) {
   }
