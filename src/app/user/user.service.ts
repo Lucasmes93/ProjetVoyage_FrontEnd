@@ -7,13 +7,12 @@ import {User} from "../interface/user.interface";
   providedIn: 'root'
 })
 export class UserService {
-  private jsonFile = 'asset/users.json';
+  private jsonFile = 'assets/user.json'
 
   constructor(private http: HttpClient) {
   }
 
-  getUsers(): Observable<User[]> {
-
+  getUser(): Observable<User[]> {
     return this.http.get<User[]>(this.jsonFile);
   }
 }
