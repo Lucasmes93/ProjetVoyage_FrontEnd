@@ -7,9 +7,12 @@ import {UserService} from '../user.service';
   templateUrl: './user-view.component.html',
   styleUrls: ['./user-view.component.css']
 })
+
 export class UserViewComponent implements OnInit {
 
   user: User[] = [];
+
+  displayedColumns: string[] = ['id', 'name', 'email'];
 
   constructor(private userService: UserService) {
 
