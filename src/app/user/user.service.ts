@@ -1,18 +1,17 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {User} from "../interface/user.interface";
+import {User} from "../interfaces/user.interface";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  private jsonFile = 'assets/users.json'
+  private jsonFile = 'assets/users.json';
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) { }
 
-  getUser(): Observable<User[]> {
+  getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.jsonFile);
   }
 }

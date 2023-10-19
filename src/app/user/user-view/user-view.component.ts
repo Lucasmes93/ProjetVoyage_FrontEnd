@@ -1,26 +1,22 @@
 import {Component, OnInit} from '@angular/core';
-import {User} from "../../interface/user.interface";
-import {UserService} from '../user.service';
+import {User} from "../../interfaces/user.interface";
+import {UserService} from "../user.service";
 
 @Component({
   selector: 'app-user-view',
   templateUrl: './user-view.component.html',
   styleUrls: ['./user-view.component.css']
 })
-
 export class UserViewComponent implements OnInit {
-
-  user: User[] = [];
-
+  users: User[] = [];
   displayedColumns: string[] = ['id', 'name', 'email'];
 
   constructor(private userService: UserService) {
-
   }
 
   ngOnInit(): void {
-    this.userService.getUser().subscribe(users => {
-      this.user = users;
+    this.userService.getUsers().subscribe((users: User[]) => {
+      this.users = users;
     })
   }
 }
