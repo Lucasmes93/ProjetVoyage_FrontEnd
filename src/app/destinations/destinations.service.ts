@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { Destinations } from "../interface/destinations.interface";
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Observable, throwError} from 'rxjs';
+import {catchError} from 'rxjs/operators';
+import {Destinations} from '../interface/destinations.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -9,15 +10,21 @@ import { Destinations } from "../interface/destinations.interface";
 export class DestinationsService {
   private apiRest = 'http://127.0.0.1:8000/api/destinations/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   getDestinations(authToken: string): Observable<Destinations> {
     const headers = new HttpHeaders({
-      'Authorization': Bearer ${authToken}
+      'Authorization': `Bearer ${authToken}`
     });
-  
+
     const url = this.apiRest;
-  
-    // Utilisez le pipe (|) pour renvoyer un Observable vide si nécessaire
-    return this.http.get<Destinations>(url, { headers }) || new Observable<Destinations>();
+
+    return this.http.get<Destinations>(url, {headers}).pipe(
+      catchError(err => {
+        console.error('Une erreur s\'est produite lors de la récupération des données :', err);
+        return throwError(err); // Renvoie une erreur observable
+      })
+    );
   }
+}
