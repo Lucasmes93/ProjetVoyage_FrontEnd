@@ -13,11 +13,12 @@ export class DestinationsService {
 
   getDestinations(authToken: string): Observable<Destinations> {
     const headers = new HttpHeaders({
-      'Authorization': Bearer ${authToken}
+      'Authorization': `Bearer ${authToken}`
     });
-  
+
     const url = this.apiRest;
-  
-    // Utilisez le pipe (|) pour renvoyer un Observable vide si nécessaire
-    return this.http.get<Destinations>(url, { headers }) || new Observable<Destinations>();
+
+    return this.http.get<Destinations>(url, { headers });
   }
+}
+
