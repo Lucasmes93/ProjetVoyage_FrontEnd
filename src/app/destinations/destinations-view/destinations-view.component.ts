@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {Destinations} from '../../interface/destinations.interface';
 import {DestinationsService} from '../destinations.service';
-import {ApiService} from '../../auth.service';
+import {ApiService} from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-destinations-view',
   templateUrl: './destinations-view.component.html',
-  styleUrls: './destinations-view.component.css'
+  styleUrls: ['./destinations-view.component.css']
 })
 export class DestinationsViewComponent implements OnInit {
   destinations: Destinations[] = [];
