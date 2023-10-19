@@ -19,4 +19,8 @@ export class ApiService {
 
     return this.http.get(this.apiUrl, {headers});
   }
+
+  setTokenFromPostman(tokenFromPostman: string) {
+
+  }
 }
