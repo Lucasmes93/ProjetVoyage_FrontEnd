@@ -17,6 +17,7 @@ import { UserprofileViewComponent } from './userprofile/userprofile-view/userpro
 import { UserprofileCreateComponent } from './userprofile/userprofile-create/userprofile-create.component';
 import { DestinationsCreateComponent } from './destinations/destinations-create/destinations-create.component';
 import { BookingsCreateComponent } from './bookings/bookings-create/bookings-create.component';
+import { AuthTokenComponent } from './auth/auth-token/auth-token.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { BookingsCreateComponent } from './bookings/bookings-create/bookings-cre
     UserprofileCreateComponent,
     DestinationsCreateComponent,
     BookingsCreateComponent,
+    AuthTokenComponent,
 
   ],
   imports: [
