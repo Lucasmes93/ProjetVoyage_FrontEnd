@@ -11,12 +11,20 @@ import {PostViewComponent} from './post/post-view/post-view.component';
 import {PostService} from "./post/post.service";
 import {MatTabsModule} from '@angular/material/tabs';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { BookingsViewComponent } from './bookings/bookings-view/bookings-view.component';
+import { DestinationsViewComponent } from './destinations/destinations-view/destinations-view.component';
+import { UserprofileViewComponent } from './userprofile/userprofile-view/userprofile-view.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     UserViewComponent,
-    PostViewComponent
+    PostViewComponent,
+    BookingsViewComponent,
+    DestinationsViewComponent,
+    UserprofileViewComponent,
+
   ],
   imports: [
     BrowserModule,
