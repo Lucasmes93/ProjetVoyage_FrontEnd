@@ -14,6 +14,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { BookingsViewComponent } from './bookings/bookings-view/bookings-view.component';
 import { DestinationsViewComponent } from './destinations/destinations-view/destinations-view.component';
 import { UserprofileViewComponent } from './userprofile/userprofile-view/userprofile-view.component';
+import { UserprofileCreateComponent } from './userprofile/userprofile-create/userprofile-create.component';
+import { DestinationsCreateComponent } from './destinations/destinations-create/destinations-create.component';
+import { BookingsCreateComponent } from './bookings/bookings-create/bookings-create.component';
 
 
 @NgModule({
@@ -24,6 +27,9 @@ import { UserprofileViewComponent } from './userprofile/userprofile-view/userpro
     BookingsViewComponent,
     DestinationsViewComponent,
     UserprofileViewComponent,
+    UserprofileCreateComponent,
+    DestinationsCreateComponent,
+    BookingsCreateComponent,
 
   ],
   imports: [
