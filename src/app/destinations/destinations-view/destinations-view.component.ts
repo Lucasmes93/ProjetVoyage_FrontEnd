@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Destinations} from '../../interface/destinations.interface';
 import {DestinationsService} from '../destinations.service';
-import {ApiService} from '../../auth.service'; // Assurez-vous d'importer ApiService depuis le bon emplacement
+import {ApiService} from '../../auth.service';
 
 @Component({
   selector: 'app-destinations-view',
@@ -14,22 +14,22 @@ export class DestinationsViewComponent implements OnInit {
 
   constructor(
     private destinationsService: DestinationsService,
-    private apiService: ApiService // Injection du service ApiService
+    private apiService: ApiService
   ) {
   }
 
   ngOnInit() {
-    this.appelAPIAvecToken();
+    this.fetchDataWithToken();
   }
 
-  appelAPIAvecToken() {
+  fetchDataWithToken() {
     this.apiService.getData().subscribe(
-      data => {
-        // Gérer la réponse ici
-        console.log(data);
+      (response: any) => {
+        // Gérer la réponse ici de manière plus descriptive
+        console.log('Données récupérées avec succès :', response);
       },
-      error => {
-        // Gérer les erreurs ici
+      (error: any) => {
+        // Gérer les erreurs ici de manière plus descriptive
         console.error('Erreur lors de la récupération des données :', error);
       }
     );
