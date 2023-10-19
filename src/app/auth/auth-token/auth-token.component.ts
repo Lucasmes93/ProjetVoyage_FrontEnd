@@ -4,10 +4,10 @@ import {ApiService} from '../auth.service';
 
 @Component({
   selector: 'app-auth',
-  templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.css']
+  templateUrl: './auth-token.component.html',
+  styleUrls: ['./auth-token.component.css']
 })
-export class AuthComponent implements OnInit {
+export class AuthTokenComponent implements OnInit {
   constructor(private route: ActivatedRoute, private authService: ApiService) {
   }
 
