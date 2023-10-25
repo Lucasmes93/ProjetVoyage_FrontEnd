@@ -25,8 +25,9 @@ export class DestinationsViewComponent implements OnInit {
   fetchDataWithToken() {
     this.apiService.getData().subscribe(
       (response: any) => {
+        this.destinations=response.results;
         // Gérer la réponse ici de manière plus descriptive
-        console.log('Données récupérées avec succès :', response);
+        console.log('Données récupérées avec succès :', response.results);
       },
       (error: any) => {
         // Gérer les erreurs ici de manière plus descriptive
