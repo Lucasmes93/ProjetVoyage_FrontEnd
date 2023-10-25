@@ -4,20 +4,19 @@
       <th mat-header-cell *matHeaderCellDef> ID</th>
       <td mat-cell *matCellDef="let destinations"> {{destinations.id}} </td>
     </ng-container>
-  
+
     <!-- Name Column -->
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef> Name</th>
       <td mat-cell *matCellDef="let destinations"> {{destinations.name}} </td>
     </ng-container>
-  
+
     <!-- Weight Column -->
     <ng-container matColumnDef="description">
       <th mat-header-cell *matHeaderCellDef> Description</th>
       <td mat-cell *matCellDef="let destinations"> {{destinations.description}} </td>
     </ng-container>
-  
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-  

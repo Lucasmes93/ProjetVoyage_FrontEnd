@@ -1,6 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { AuthTokenComponent } from './auth-token.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 describe('AuthTokenComponent', () => {
   let component: AuthTokenComponent;
