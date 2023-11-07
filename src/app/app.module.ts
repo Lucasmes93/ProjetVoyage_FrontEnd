@@ -11,38 +11,46 @@ import {PostViewComponent} from './post/post-view/post-view.component';
 import {PostService} from "./post/post.service";
 import {MatTabsModule} from '@angular/material/tabs';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { BookingsViewComponent } from './bookings/bookings-view/bookings-view.component';
-import { DestinationsViewComponent } from './destinations/destinations-view/destinations-view.component';
-import { UserprofileViewComponent } from './userprofile/userprofile-view/userprofile-view.component';
-import { UserprofileCreateComponent } from './userprofile/userprofile-create/userprofile-create.component';
-import { DestinationsCreateComponent } from './destinations/destinations-create/destinations-create.component';
-import { BookingsCreateComponent } from './bookings/bookings-create/bookings-create.component';
-import { AuthTokenComponent } from './auth/auth-token/auth-token.component';
-
+import {PostCreateComponent} from './post/post-create/post-create.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+import {AppRoutingModule} from './app-routing.module';
+import {TopBarComponent} from './common/top-bar/top-bar.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {SpinnerComponent} from './common/spinner/spinner.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    UserViewComponent,
-    PostViewComponent,
-    BookingsViewComponent,
-    DestinationsViewComponent,
-    UserprofileViewComponent,
-    UserprofileCreateComponent,
-    DestinationsCreateComponent,
-    BookingsCreateComponent,
-    AuthTokenComponent,
-
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    MatTableModule,
-    MatTabsModule,
-    BrowserAnimationsModule
-  ],
-  providers: [UserService, PostService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        UserViewComponent,
+        PostViewComponent,
+        PostCreateComponent,
+        TopBarComponent,
+        SpinnerComponent
+    ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        MatTableModule,
+        MatTabsModule,
+        BrowserAnimationsModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatButtonModule,
+        AppRoutingModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatProgressSpinnerModule,
+        MatCardModule
+    ],
+    providers: [UserService, PostService],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
