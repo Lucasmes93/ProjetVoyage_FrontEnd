@@ -9,7 +9,7 @@ Ce projet est une application Angular destinée à recommander des destinations 
 
 ## Installation
 
-1. Clonez ce référentiel : `git clone https://url-de-votre-projet.git`
+1. Clonez ce référentiel : `git clone https://github.com/Lucasmes93/ProjetVoyage_FrontEnd`
 2. Accédez au répertoire du projet : `cd nom-de-votre-projet`
 
 3. Installez les dépendances Node.js : `npm install`
