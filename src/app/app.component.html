@@ -1,4 +1,11 @@
-<app-top-bar></app-top-bar>
-<div class="main-content">
-    <router-outlet></router-outlet>
-</div>
+<mat-tab-group animationDuration="0ms">
+  <mat-tab label="UserProfile">
+    <app-userprofile-view></app-userprofile-view>
+  </mat-tab>
+  <mat-tab label="Bookings">
+    <app-bookings-view></app-bookings-view>
+  </mat-tab>
+  <mat-tab label="Destinations">
+    <app-destinations-view></app-destinations-view>
+  </mat-tab>
+</mat-tab-group>

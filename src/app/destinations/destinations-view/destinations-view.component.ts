@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {Destinations} from '../../interface/destinations.interface';
-import {DestinationsService} from '../destinations.service';
-import {ApiService} from 'src/app/auth/auth.service';
+import { Component, OnInit } from '@angular/core';
+import { Destinations } from '../../interface/destinations.interface';
+import { DestinationsService } from '../destinations.service';
+import { ApiService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-destinations-view',
@@ -11,6 +11,7 @@ import {ApiService} from 'src/app/auth/auth.service';
 export class DestinationsViewComponent implements OnInit {
   destinations: Destinations[] = [];
   displayedColumns: string[] = ['id', 'name', 'description'];
+  searchTerm: any;
 
   constructor(
     private destinationsService: DestinationsService,
@@ -25,14 +26,31 @@ export class DestinationsViewComponent implements OnInit {
   fetchDataWithToken() {
     this.apiService.getData().subscribe(
       (response: any) => {
-        this.destinations=response.results;
-        // Gérer la réponse ici de manière plus descriptive
-        console.log('Données récupérées avec succès :', response.results);
+        this.destinations = response.results;
+        console.log('Data retrieved successfully:', response.results);
       },
       (error: any) => {
-        // Gérer les erreurs ici de manière plus descriptive
-        console.error('Erreur lors de la récupération des données :', error);
+        console.error('Error while retrieving data:', error);
       }
     );
+  }
+
+  performSearch() {
+    if (this.searchTerm) {
+      const idToSearch = Number(this.searchTerm);
+      if (!isNaN(idToSearch)) {
+        const foundDestination = this.destinations.find(destination => destination.id === idToSearch);
+
+        if (foundDestination) {
+          this.destinations = [foundDestination];
+        } else {
+          this.destinations = [];
+        }
+      } else {
+        this.destinations = [];
+      }
+    } else {
+      this.fetchDataWithToken();
+    }
   }
 }

@@ -9,16 +9,26 @@ import { Destinations } from "../interface/destinations.interface";
 export class DestinationsService {
   private apiRest = 'http://127.0.0.1:8000/api/destinations/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
-  getDestinations(authToken: string): Observable<Destinations> {
+  getDestinations(authToken: string): Observable<Destinations[]> {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${authToken}`
     });
 
     const url = this.apiRest;
 
+    return this.http.get<Destinations[]>(url, { headers });
+  }
+
+  getDestinationById(authToken: string, id: number): Observable<Destinations> {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${authToken}`
+    });
+
+    const url = `${this.apiRest}${id}`; // Ajouter l'ID à l'URL
+
     return this.http.get<Destinations>(url, { headers });
   }
 }
-

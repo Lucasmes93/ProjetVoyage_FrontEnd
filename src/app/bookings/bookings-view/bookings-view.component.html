@@ -1,26 +1,29 @@
-<table [dataSource]="dataSource" mat-table> <!-- Utilisez [dataSource]="dataSource" -->
+<table mat-table [dataSource]="bookings" class="mat-elevation-z8">
+    <!-- Position Column -->
     <ng-container matColumnDef="id">
-        <th *matHeaderCellDef mat-header-cell> ID</th>
-        <td *matCellDef="let booking" mat-cell> {{ booking.id }} </td>
+      <th mat-header-cell *matHeaderCellDef> ID</th>
+      <td mat-cell *matCellDef="let bookings"> {{bookings.id}} </td>
     </ng-container>
-
+  
+    <!-- Name Column -->
     <ng-container matColumnDef="date">
-        <th *matHeaderCellDef mat-header-cell> Date</th>
-        <td *matCellDef="let booking" mat-cell> {{ booking.date }} </td>
+      <th mat-header-cell *matHeaderCellDef> Date</th>
+      <td mat-cell *matCellDef="let bookings"> {{bookings.date}} </td>
     </ng-container>
-
+  
+    <!-- Weight Column -->
     <ng-container matColumnDef="user">
-        <th *matHeaderCellDef mat-header-cell> User</th>
-        <td *matCellDef="let booking" mat-cell> {{ booking.user }} </td>
+      <th mat-header-cell *matHeaderCellDef> User</th>
+      <td mat-cell *matCellDef="let bookings"> {{bookings.user}} </td>
     </ng-container>
 
+    <!-- Weight Column -->
     <ng-container matColumnDef="destination">
-        <th *matHeaderCellDef mat-header-cell> Destination</th>
-        <td *matCellDef="let booking" mat-cell> {{ booking.destination }} </td>
-    </ng-container>
+        <th mat-header-cell *matHeaderCellDef> User</th>
+        <td mat-cell *matCellDef="let bookings"> {{bookings.destination}} </td>
+      </ng-container>
 
-    <!-- Définissez les autres colonnes de la même manière -->
-
-    <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
-    <tr *matRowDef="let row; columns: displayedColumns" mat-row></tr>
-</table>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  

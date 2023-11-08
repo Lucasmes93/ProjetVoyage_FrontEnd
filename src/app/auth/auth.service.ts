@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
 })
 export class ApiService {
   private apiUrl = 'http://127.0.0.1:8000/api/destinations/';
-  private authToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4MjQwMjM4LCJpYXQiOjE2OTgyMzk5MzgsImp0aSI6IjYyMDQ2Y2ViODVmNjQ0M2ZhY2JkY2Q0Zjk2ODE3M2RmIiwidXNlcl9pZCI6MX0.hckbgHOxHeu1rCLOA03xgdMaDK-IxKaQwt53tzWSL4w'; // Remplacez par votre token d'authentification
+  private authToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5NDQzOTMwLCJpYXQiOjE2OTk0NDM2MzAsImp0aSI6IjVlMWRhYjYzNTk2MTQ5YzhiYzQwYTM4MzZlY2Y0ZTRmIiwidXNlcl9pZCI6MX0.-vYE682CfKpyJItq-bDS0RIuKk2ND8gwwruATrPb_Sk'; // Remplacez par votre token d'authentification
 
   constructor(private http: HttpClient) {
   }

@@ -13,7 +13,7 @@ export class AuthTokenComponent implements OnInit {
   ngOnInit(): void {
     // Obtenez le token de Postman (remplacez 'YOUR_TOKEN_FROM_POSTMAN' par le vrai token)
     const tokenFromPostman =
-      'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4MjQwMjM4LCJpYXQiOjE2OTgyMzk5MzgsImp0aSI6IjYyMDQ2Y2ViODVmNjQ0M2ZhY2JkY2Q0Zjk2ODE3M2RmIiwidXNlcl9pZCI6MX0.hckbgHOxHeu1rCLOA03xgdMaDK-IxKaQwt53tzWSL4w'; // Remplacez 'YOUR_TOKEN_FROM_POSTMAN' par le vrai token
+      'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5NDQzOTMwLCJpYXQiOjE2OTk0NDM2MzAsImp0aSI6IjVlMWRhYjYzNTk2MTQ5YzhiYzQwYTM4MzZlY2Y0ZTRmIiwidXNlcl9pZCI6MX0.-vYE682CfKpyJItq-bDS0RIuKk2ND8gwwruATrPb_Sk'; // Remplacez 'YOUR_TOKEN_FROM_POSTMAN' par le vrai token
 
     // Utilisez la méthode pour définir le token
     this.authService.setTokenFromPostman(tokenFromPostman);
