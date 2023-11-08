@@ -47,7 +47,7 @@ import {MatCardModule} from '@angular/material/card';
         MatToolbarModule,
         MatIconModule,
         MatProgressSpinnerModule,
-        MatCardModule
+        MatCardModule,
     ],
     providers: [UserService, PostService],
     bootstrap: [AppComponent]
