@@ -1,27 +1,37 @@
-# EstiamTest
+# Projet de Recommandations de Voyages en Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
+Ce projet est une application Angular destinée à recommander des destinations de voyage en fonction des préférences des utilisateurs et de leur budget. Il inclut également des fonctionnalités de réservation de voyages pour les utilisateurs authentifiés.
 
-## Development server
+## Configuration requise
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Node.js](https://nodejs.org/) (version 14.x ou supérieure)
+- [Angular CLI](https://cli.angular.io/) (version 12.x ou supérieure)
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clonez ce référentiel : `git clone https://url-de-votre-projet.git`
+2. Accédez au répertoire du projet : `cd nom-de-votre-projet`
 
-## Build
+3. Installez les dépendances Node.js : `npm install`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Développement
 
-## Running unit tests
+- Lancez le serveur de développement Angular : `ng serve`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+L'application sera disponible à l'adresse http://localhost:4200/. Elle se rechargera automatiquement lorsque vous apportez des modifications au code.
 
-## Running end-to-end tests
+## Utilisation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Création de compte : Les utilisateurs peuvent créer un compte avec leur nom d'utilisateur et mot de passe.
+- Profil utilisateur : Les utilisateurs peuvent ajouter leurs préférences de voyage et leur budget dans leur profil.
+- Destinations : Parcourez les destinations de voyage recommandées et consultez les détails.
+- Réservations : Les utilisateurs authentifiés peuvent effectuer des réservations de voyages pour les destinations.
 
-## Further help
+## Endpoints API
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+L'application expose une API REST avec les endpoints suivants :
+
+- `/api/userprofile/`: CRUD pour les profils d'utilisateurs.
+- `/api/destinations/`: CRUD pour les destinations de voyage.
+- `/api/bookings/`: CRUD pour les réservations de voyages.
+
